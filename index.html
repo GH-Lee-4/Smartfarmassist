@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FarmSmart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Smart Farm Assistant</h1>
+    <nav>
+      <a href="#solutions">Solutions</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Farm Smart Not Hard</h2>
+      <p>Tools and insights to help farmers grow more with less.</p>
+      <a href="#contact">Get Started</a>
+    </section>
+
+    <section id="solutions">
+      <h2>Solutions</h2>
+      <ul>
+        <li>Soil health monitoring</li>
+        <li>Smart irrigation</li>
+        <li>Harvest analytics</li>
+      </ul>
+    </section>
+     
+    <div id="chat">
+      <div id="messages"></div>
+      <div id="input-area">
+        <input id="userInput" type="text" placeholder="Ask about farming..." />
+        <button onclick="sendMessage()">Send</button>
+      </div>
+      <div style="margin-top:10px;">
+        <button class="action-btn" onclick="clearChat()">Clear Chat</button>
+        <button class="action-btn" onclick="showTopics()">Show Topics</button>
+        <button class="action-btn" onclick="randomTip()">Random Tip</button>
+      </div>
+    </div>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form>
+        <input name="name" placeholder="Name" required />
+        <input name="email" type="email" placeholder="Email" required />
+        <button type="submit">Submit</button>
+      </form>
+
+    </section>
+  </main>
+  <form onsubmit="event.preventDefault(); alert('Thanks for contacting SmartFarm!');">
+
+  <footer>
+    <p>© <span id="year"></span> SmartFarm</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  </body>
+  </html>
